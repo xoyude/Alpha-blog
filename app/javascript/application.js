@@ -4,4 +4,4 @@ import "controllers"
 import "popper"
 import "bootstrap"
 import "jquery"
-import "stylesheets/application"
+
