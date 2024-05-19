@@ -1,30 +1,35 @@
-<% if @article.errors.any? %>
-    <h2>The followings errors prevented the article from being saved</h2>
-    <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-     <li>   <%= msg %> </li>
-    <% end %>
-    </ul>
-<% end %>
+<div class="container">
+        <% if @article.errors.any? %>
+            <h2>The followings errors prevented the article from being saved</h2>
+            <ul>
+            <% @article.errors.full_messages.each do |msg| %>
+            <li>   <%= msg %> </li>
+            <% end %>
+            </ul>
+        <% end %>
+        <div class="row justify-content-center">
+        <div class="col-10">
+        <%= form_with(model: @article, class: "shadow-lg p-3 mb-3 bg-info shadow rounded", local: true) do |f| %>
+        <div class="input-group mb-3 row">
+            <%= f.label :title, class:"col-2 col-form-label text-light" %>
+        <div class="col-10"> 
+            <%= f.text_field :title, class:"form-control shadow rounded", placeholder:"Title of article"  %>
+        </div> 
+        </div>
+        <div class="input-group mb-3 row">
+            <%= f.label :description, class:"col-2 col-form-label text-light" %>
+            <div class="col-10"> 
+            <%= f.text_area :description, rows: 10, class:"form-control shadow rounded", placeholder:"Description of article" %>
+            </div>
+        </div>    
 
+        <div class="input-group justify-content-center mb-3">
+            <%= f.submit class:"btn btn-outline-light btn-lg" %>
+        </div>
 
-<%= form_with(model: @article, local: true) do |f| %>
-
-
-    <p>
-        <%= f.label :title %><br/>
-        <%= f.text_field :title %>
-    </p>
-
-    <p>
-    <%= f.label :description %><br/>
-    <%= f.text_area :description %>
-    </p>
-
-    <p>
-    <%= f.submit %>
-    </p>
-
-
-
-<% end %>
+        <% end %>
+        </div>
+        </div>
+        <%= link_to '[ Return to articles listing ]', articles_path, class: "text-info input-group justify-content-center mb-3" %>
+</div>
+</div>
