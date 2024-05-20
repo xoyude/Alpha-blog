@@ -1,68 +1,73 @@
+@import "bootstrap";
 
-  @import "bootstrap";
+.navbar {
+  background-color: black !important;
+}
 
-  .navbar {
-      background-color: black !important;
-  }
+.nav-link {
+  color: white !important;
+}
 
-  .nav-link {
-      color: white !important;
-  }
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
 
-  #logo {
-      float: left;
-      font-size: 1.7em;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: -1px;
-      font-weight: bold;
-  }
+#home-container {
+  margin-top: 25px;
+}
 
-  #home-container {
-      margin-top: 25px;
-  }
+.jumbotron {
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('main.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+  justify-content: center;
+  padding: 70px 15px;
+}
 
-  .jumbotron {
-      background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('main.jpg');
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 425px;
-      justify-content: center;
-      padding: 70px 15px;
-  }
+html, body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+  color: #fff;
+}
 
-  html,
-  body {
-      height: 100%;
-      background-image: linear-gradient(to bottom right, #ff7e5f, #feb47b);
-      color: #fff;
-  }
+#page-content {
+  flex: 1 0 auto;
+}
 
-  #page-content {
-      flex: 1 0 auto;
-  }
+#sticky-footer {
+  flex-shrink: 0;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
-  #sticky-footer {
-      flex-shrink: none;
-  }
+.custom-card {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}
 
-  .custom-card {
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  
-  .custom-card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
-  }
+.custom-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
 
-  .card-title a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .card-title a:hover,
-  .card-title a:active {
-    text-decoration: underline;
-  }
+.card-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-title a:hover,
+.card-title a:active {
+  text-decoration: underline;
+}
+
+.custom-margin {
+  margin-bottom: 0 !important;
+}

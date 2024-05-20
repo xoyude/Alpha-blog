@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>AlphaBlog</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= javascript_include_tag "turbo", type: "module" %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
-
-  <body class="d-flex flex-column">
-    <%= render 'layouts/navbar' %>
-    <div id="page-content">
-      <%= render 'layouts/messages' %>
-      <%= yield %>
-    </div>
-    <%= render 'layouts/footer' %>
-  </body>
+<head>
+  <title>AlphaBlog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+<body class="d-flex flex-column">
+  <%= render 'layouts/navbar' %>
+  <div id="page-content" class="container pt-3">
+    <%= render 'layouts/messages' %>
+    <%= yield %>
+  </div>
+  <%= render 'layouts/footer' %>
+</body>
 </html>
